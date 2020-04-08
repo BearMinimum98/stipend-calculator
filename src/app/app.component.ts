@@ -23,6 +23,6 @@ export class AppComponent {
       out += (this.endDate.getFullYear() - this.startDate.getFullYear() - 1) * 12
     }
     out += (this.endDate.getDate() + 1) / new Date(this.endDate.getFullYear(), this.endDate.getMonth() + 1, 0).getDate()
-    document.querySelector('#result').innerHTML = `\~\$${out * (this.stipend)}`
+    document.querySelector('#result').innerHTML = `\~\$${Math.trunc(out * (this.stipend))}`
   }
 }

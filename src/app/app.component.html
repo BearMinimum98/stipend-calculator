@@ -1,35 +1,34 @@
 <h1 style='text-align:center; padding-top: .5em'>Amazon Stipend Calculator</h1>
-<div class='body'>
-  <mat-card class='cards'>
-    <div class='container'>
-      <mat-form-field class='full-width'>
-        <mat-label>Start date</mat-label>
-        <input matInput [matDatepicker]="picker" [(ngModel)]='startDate' />
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field class='full-width'>
-        <mat-label>End date</mat-label>
-        <input matInput [matDatepicker]="picker2" [(ngModel)]='endDate'>
-        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field class='full-width'>
-        <mat-label>Stipend amount (per month)</mat-label>
-        <input matInput type='number' [(ngModel)]='stipend' />
-      </mat-form-field>
-      <button mat-raised-button (click)='calculate()'>Calculate</button>
-    </div>
-  </mat-card>
-  <mat-card class='cards'>
-      Your result: <span id='result'></span>
-  </mat-card>
-</div>
-<mat-card class='faq'>
+<mat-card class='cards'>
+  <div class='container'>
+    <mat-form-field class='full-width'>
+      <mat-label>Start date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]='startDate' />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class='full-width'>
+      <mat-label>End date</mat-label>
+      <input matInput [matDatepicker]="picker2" [(ngModel)]='endDate'>
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class='full-width'>
+      <mat-label>Stipend amount (per month)</mat-label>
+      <input matInput type='number' [(ngModel)]='stipend' />
+    </mat-form-field>
+    <button mat-raised-button (click)='calculate()'>Calculate</button>
+  </div>
+</mat-card>
+<mat-card class='cards'>
+    Your result: <span id='result'></span>
+</mat-card>
+<mat-card class='cards'>
   <h1>FAQs and Other Information</h1>
   <ul>
     <li>Month at Amazon is 4.33 weeks</li>
     <li>Starting and ending weekends do not count</li>
     <li>This is not an official tool by Amazon, use at your own risk</li>
+    <li><span style='font-weight:bold'>Is this stipend amount pre- or post-tax?</span> It is post-tax</li>
   </ul>
 </mat-card>
